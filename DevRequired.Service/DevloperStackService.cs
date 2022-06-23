@@ -18,8 +18,8 @@ namespace DevRequired.Service
         public async Task<bool> GetDevRequired(DevloperMaster devloperMaster)
         {
             int count = 1;
-            string data = devloperMaster.Stack;
-            string[] list = data.Split('|');
+            string[] list = devloperMaster.Stack.Split('|');
+           
             Dictionary<String, int> datalist = new Dictionary<string, int>();
             StringBuilder sb = new StringBuilder();
 
