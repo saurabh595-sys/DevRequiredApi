@@ -20,7 +20,7 @@ namespace DevRequired.Service
             int count = 1;
             string[] list = devloperMaster.Stack.Split('|');
            
-            Dictionary<String, int> datalist = new Dictionary<string, int>();
+            Dictionary<string, int> datalist = new Dictionary<string, int>();
             StringBuilder sb = new StringBuilder();
 
             foreach (var item in list)

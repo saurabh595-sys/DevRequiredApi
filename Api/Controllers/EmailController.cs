@@ -24,7 +24,7 @@ namespace DevRequired.Api.Controllers
 
 
         [HttpPost]
-        [Route("Edit")]
+        [Route("Email")]
         public Task< bool> GetEmail(DevloperMaster devloperMasterDto)
         {
            
