@@ -33,12 +33,14 @@ namespace DevRequired.Service
                 }
             }
 
-            sb.Append("<table border = 1><tr><th>Id</th>");
-            sb.Append("<th>Stack</th>");
-            sb.Append("<th>Count</th></tr>");
+            sb.Append("<table  style='width:95%; margin-bottom: 1rem; rgb(56, 52, 133); border-collapse: collapse; margin-bottom: 35px !important; margin-right: auto; margin-left: auto;'><tr><th width=10% style='border-collapse:collapse;border:1px solid black';><h4> SrNo </h4></th>");
+            sb.Append("<th width=50% style='border-collapse:collapse;border:1px solid black';><h4>Stack</h4></th>");
+            sb.Append("<th width=20% style='border-collapse:collapse;border:1px solid black';><h4>Count</h4></th></tr> ");
             foreach (var item1 in datalist)
             {
-                sb.Append($"<tr><th>{count}</th><th>{item1.Key}</th><th>{item1.Value}</th></tr>");
+                sb.Append($"<tr><td style='border-collapse:collapse;border: 1px solid black;text-align:center; padding-top:5px; padding-bottom: 5px'; > {count} </td>" +
+                    $"<td style = 'border-collapse:collapse;border:1px solid black;text-align:center;padding-top:5px; padding-bottom: 5px';> { item1.Key} </td>" +
+                    $"<td style = 'border-collapse:collapse;border:1px solid black;text-align:right ;padding-top:5px; padding-bottom: 5px; padding-right: 30px;'>{ item1.Value}</td> ");
                 count++;
             }
             sb.Append("</table>");
