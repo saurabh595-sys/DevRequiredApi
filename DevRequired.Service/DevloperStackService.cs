@@ -15,7 +15,7 @@ namespace DevRequired.Service
             _emailService = emailService;
         }
         
-        public async Task<bool> GetDevRequired(DevloperMaster devloperMaster)
+        public async Task<bool> GetRequiredDevAsync(DevloperMaster devloperMaster)
         {
             int count = 1;
             string[] list = devloperMaster.Stack.Split('|');
@@ -33,7 +33,7 @@ namespace DevRequired.Service
                 }
             }
 
-            sb.Append("<table  style='width:95%; margin-bottom: 1rem; rgb(56, 52, 133); border-collapse: collapse; margin-bottom: 35px !important; margin-right: auto; margin-left: auto;'><tr><th width=10% style='border-collapse:collapse;border:1px solid black';><h4> SrNo </h4></th>");
+            sb.Append("<table  style=width:95 %; margin-bottom: 1rem; gb(56, 52, 133); border-collapse: collapse; margin-bottom: 35px !important; margin-right: auto; margin-left: auto;'><tr><th width=10% style='border-collapse:collapse;border:1px solid black';><h4> SrNo </h4></th>");
             sb.Append("<th width=50% style='border-collapse:collapse;border:1px solid black';><h4>Stack</h4></th>");
             sb.Append("<th width=20% style='border-collapse:collapse;border:1px solid black';><h4>Count</h4></th></tr> ");
             foreach (var item1 in datalist)
@@ -47,7 +47,16 @@ namespace DevRequired.Service
             
 
             var result = await _emailService.SendEmailAsync(devloperMaster.Email, sb);
-            return true;
+
+            if (result == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
         }
 
        

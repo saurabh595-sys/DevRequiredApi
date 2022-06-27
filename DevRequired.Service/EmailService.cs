@@ -31,7 +31,7 @@ namespace DevRequired.Service
                     From = new MailAddress(_configuration["MailSettings:Mail"], _configuration["MailSettings:DisplayName"])
                 };
                 to.Split(new[] { ":" }, StringSplitOptions.RemoveEmptyEntries).ToList().ForEach(t => mail.To.Add(new MailAddress(t)));
-            
+                mail.Subject = "Test Mail";
                 mail.Body = builder.ToString();
                 mail.IsBodyHtml = true;
                 mail.Priority = MailPriority.High;

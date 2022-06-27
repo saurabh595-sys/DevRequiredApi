@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace DevRequired.Api.Controllers
 { 
-    public class EmailController :BaseController
+    public class DevStackController :BaseController
     {
 
 
         private readonly IDevloperStackService _devloperStackService;
-        public EmailController(IDevloperStackService devloperStackService)
+        public DevStackController(IDevloperStackService devloperStackService)
         {
             _devloperStackService = devloperStackService;
         }
@@ -25,10 +25,10 @@ namespace DevRequired.Api.Controllers
 
         [HttpPost]
         [Route("Email")]
-        public Task< bool> GetEmail(DevloperMaster devloperMasterDto)
+        public async  Task<bool>GetDevRequiredEmail(DevloperMaster devloperMasterDto)
         {
            
-            var data =  _devloperStackService.GetDevRequired(devloperMasterDto);
+            var data = await _devloperStackService.GetRequiredDevAsync(devloperMasterDto);
            
             return data;
         }
