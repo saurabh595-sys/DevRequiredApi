@@ -1,4 +1,5 @@
 ﻿
+using Api;
 using DevRequired.Model;
 using DevRequired.Service;
 using Microsoft.AspNetCore.Http;
@@ -31,6 +32,13 @@ namespace DevRequired.Api.Controllers
             var data = await _devloperStackService.GetRequiredDevAsync(devloperMasterDto);
            
             return data;
+        }
+
+        [HttpGet]
+        [Route("Test")]
+        public Test Test()
+        {
+            return new Test();
         }
 
     }
