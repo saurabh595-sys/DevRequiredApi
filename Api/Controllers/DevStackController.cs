@@ -34,12 +34,5 @@ namespace DevRequired.Api.Controllers
             return data;
         }
 
-        [HttpGet]
-        [Route("Test")]
-        public Test Test()
-        {
-            return new Test();
-        }
-
     }
 }
