@@ -26,7 +26,7 @@ namespace DevRequired.Api.Controllers
 
         [HttpPost]
         [Route("Email")]
-        public async  Task<bool>GetDevRequiredEmail(DevloperMaster devloperMasterDto)
+        public async  Task<string>GetDevRequiredEmail(DevloperMaster devloperMasterDto)
         {
            
             var data = await _devloperStackService.GetRequiredDevAsync(devloperMasterDto);

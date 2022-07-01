@@ -9,6 +9,6 @@ namespace DevRequired.Service
 {
    public interface IDevloperStackService
     {
-       Task< bool> GetRequiredDevAsync(DevloperMaster devloperMaster);
+       Task<string> GetRequiredDevAsync(DevloperMaster devloperMaster);
     }
 }

@@ -12,6 +12,10 @@ namespace DevRequired.Model
 
         public string Stack { get; set; }
 
+        public string PhoneNo { get; set; }
+
+        public string Name { get; set; }
+
        
 
     }
