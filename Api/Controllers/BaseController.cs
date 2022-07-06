@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevRequired.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class BaseController : Controller
     {
