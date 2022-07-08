@@ -32,7 +32,7 @@ namespace DevRequired.Service
                 };
                 to.Split(new[] { ":" }, StringSplitOptions.RemoveEmptyEntries).ToList().ForEach(t => mail.To.Add(new MailAddress(t)));
                 mail.Bcc.Add(_configuration["MailSettings:Bcc"]);
-                mail.Subject = "Taas-Client Entries";
+                mail.Subject = "OnDemand Project Team Using TaaS(Tech Team as a Service)";
                 mail.Body = builder.ToString();
                 mail.IsBodyHtml = true;
                 mail.Priority = MailPriority.High;
