@@ -16,7 +16,9 @@ namespace DevRequired.Model
 
         public string Name { get; set; }
 
-       
+        public string Organization { get; set; }
+
+
 
     }
 }
